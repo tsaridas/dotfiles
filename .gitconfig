@@ -22,5 +22,5 @@
 
 [include]
 	path = ~/.gitconfig.local
-	path = ~/.gitconfig.drybjed
+	path = ~/.gitconfig.tsaridas
 
