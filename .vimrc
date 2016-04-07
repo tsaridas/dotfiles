@@ -40,6 +40,12 @@ if filereadable(expand("~/.vim/bundle/vundle/autoload/vundle.vim"))
     Bundle 'Rykka/riv.vim'
     Bundle 'wannesm/wmgraphviz.vim'
     Bundle "kien/ctrlp.vim"
+    Bundle "davidhalter/jedi-vim"
+    Bundle "scrooloose/nerdtree"
+    Bundle "saltstack/salt-vim"
+    Bundle "vim-airline/vim-airline"
+    Bundle "tpope/vim-fugitive"
+    Bundle "tpope/vim-surround"
 
     " github.com/vim-scripts repositories
     "Bundle "css_color.vim"

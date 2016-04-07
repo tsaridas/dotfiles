@@ -8,7 +8,7 @@
 CURDIR			?= $(.CURDIR)
 
 # If current user is the same as owner, do more things
-OWNER			= drybjed
+OWNER			= tsaridas
 
 # Where dotfiles are kept
 DOTFILES		= ~/.config/dotfiles
@@ -44,16 +44,16 @@ OWNER_SYMLINKS = $(GIT_OWNER)
 
 # ---- Main Makefile ----
 
-all: install vim-vundle
+#all: install vim-vundle
 
-install: git mutt tmux vim zsh mc gpg bin
+#install: git mutt tmux vim zsh mc gpg bin
 
-owner: install vim-vundle gui smartcard newsbeuter
+#owner: install vim-vundle gui smartcard newsbeuter
 
-gui: xresources i3
+#gui: xresources i3
 	@ansible-playbook -i ansible/inventory ansible/playbooks/gui.yml
 
-smartcard:
+#smartcard:
 	@ansible-playbook -i ansible/inventory ansible/playbooks/gui.yml
 
 vim: $(VIM)
@@ -76,10 +76,6 @@ vim-vundle:
 		~/.vim/bundle/vundle && \
 		vim +BundleInstall +qall)
 
-mc:
-	@mkdir -p ~/.config/mc
-	@test -e ~/.config/mc/ini || $(COPY) $(CURDIR)/.config/mc/ini ~/.config/mc/ini
-
 gpg:
 	@mkdir -m 700 -p ~/.gnupg
 	@test -e ~/.gnupg/gpg.conf || $(LINK) $(CURDIR)/.gnupg/gpg.conf ~/.gnupg/gpg.conf
@@ -89,10 +85,10 @@ bin:
 	@test -e ~/.local/bin || \
 		${LINK} $(CURDIR)/.local/bin ~/.local/bin
 
-i3:
-	@mkdir -p ~/.config
-	@test -e ~/.config/i3 || \
-		${LINK} $(CURDIR)/.config/i3 ~/.config/i3
+#i3:
+#	@mkdir -p ~/.config
+#	@test -e ~/.config/i3 || \
+#		${LINK} $(CURDIR)/.config/i3 ~/.config/i3
 
 newsbeuter:
 	@mkdir -p ~/.local/share/newsbeuter
