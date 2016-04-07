@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/atsarida/Downloads/files/.vim'
+let g:netrw_dirhist_2='/Users/atsarida/.ansible'
+let g:netrw_dirhist_3='/Users/atsarida/repos/teralytics-ops/ansible/roles/motd/defaults'
+let g:netrw_dirhist_4='/Users/atsarida/repos/teralytics-ops/ansible/roles/selinux/defaults'
